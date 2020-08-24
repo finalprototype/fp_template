@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hooks/featureFlags useActiveFlags returns empty flags 1`] = `Array []`;
+
+exports[`hooks/featureFlags useActiveFlags returns empty if all flags disabled 1`] = `Array []`;
+
+exports[`hooks/featureFlags useActiveFlags returns empty safely if only flags disabled 1`] = `Array []`;
+
+exports[`hooks/featureFlags useActiveFlags returns only initial flags 1`] = `
+Array [
+  "initial1",
+  "initial.2",
+  "initial-3",
+  "initial_4",
+  "initial 5",
+]
+`;
+
+exports[`hooks/featureFlags useActiveFlags returns only url enabled flags 1`] = `
+Array [
+  "url1",
+  "url.2",
+  "url-3",
+  "url_4",
+  "url 5",
+]
+`;
+
+exports[`hooks/featureFlags useActiveFlags returns unique initial and url enabled flags 1`] = `
+Array [
+  "initial1",
+  "initial.2",
+  "initial-3",
+  "initial_4",
+  "initial 5",
+  "shared1",
+  "shared.2",
+  "shared-3",
+  "shared_4",
+  "shared 5",
+  "url1",
+  "url.2",
+  "url-3",
+  "url_4",
+  "url 5",
+]
+`;
+
+exports[`hooks/featureFlags useActiveFlags returns without url disabled flags 1`] = `
+Array [
+  "initial.2",
+  "initial-3",
+  "initial 5",
+  "shared1",
+  "shared-3",
+  "shared_4",
+  "url1",
+  "url.2",
+  "url_4",
+  "url 5",
+]
+`;

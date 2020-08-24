@@ -1,0 +1,31 @@
+---
+version: "3.8"
+
+services:
+  assets:
+    build:
+      context: .
+    container_name: "client_${REPO_SHORT_NAME}"
+    volumes:
+      - .:/app:delegated
+      - /app/node_modules
+    ports:
+      - "${PORT_ASSETS}:${PORT_ASSETS}"
+    env_file:
+      - .env
+    init: true
+    command: ["/usr/local/bin/npm", "run", "dev:client"]
+
+  bff:
+    build:
+      context: .
+    volumes:
+      - .:/app:delegated
+      - /app/node_modules
+    container_name: "bff_${REPO_SHORT_NAME}"
+    ports:
+      - "${PORT}:${PORT}"
+    env_file:
+      - .env
+    init: true
+    command: ["/usr/local/bin/npm", "run", "dev:server"]

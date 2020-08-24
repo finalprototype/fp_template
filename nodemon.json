@@ -1,0 +1,9 @@
+{
+  "watch": [
+    "./app/src/server",
+    "./src/server",
+    "./server",
+    "./.env"
+  ],
+  "ext": "js json ejs"
+}

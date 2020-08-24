@@ -1,0 +1,55 @@
+{
+  "presets": [
+    ["@babel/env", {
+      "targets": {
+        "browsers": [
+          ">2%",
+          "not ie 11",
+          "not op_mini all"
+        ]
+      },
+      "modules": "commonjs"
+    }],
+    "@babel/preset-typescript",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/proposal-class-properties",
+    "@babel/proposal-object-rest-spread"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        ["react-css-modules", {
+          "autoResolveMultipleImports": true,
+          "generateScopedName": "[local]",
+          "filetypes": {
+            ".scss": { "syntax": "postcss-scss" }
+          }
+        }]
+      ]
+    },
+    "development": {
+      "plugins": [
+        ["react-css-modules", {
+          "autoResolveMultipleImports": true,
+          "generateScopedName": "[name]__[local]___[hash:3]",
+          "filetypes": {
+            ".scss": { "syntax": "postcss-scss" }
+          }
+        }]
+      ]
+    },
+    "production": {
+      "plugins": [
+        ["react-css-modules", {
+          "autoResolveMultipleImports": true,
+          "generateScopedName": "[name]__[local]___[hash:3]",
+          "filetypes": {
+            ".scss": { "syntax": "postcss-scss" }
+          }
+        }]
+      ]
+    }
+  }
+}

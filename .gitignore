@@ -1,0 +1,11 @@
+.DS_Store
+.npmrc
+.nvmrc
+.eslintcache
+.sass-cache
+.env*
+*.code-workspace
+npm-debug.log
+node_modules
+jest
+build

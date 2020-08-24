@@ -1,0 +1,23 @@
+<% BOOTSTRAP = JSON.parse(bootstrap) %>
+<% ASSETS = BOOTSTRAP.manifest %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TEMPLATE</title>
+    <link rel="stylesheet" href="<%= ASSETS['client.css'] %>">
+    <script type="text/javascript">
+      window.config = <%- bootstrap %>;
+    </script>
+    <script src="<%= ASSETS['vendor.js'] %>" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="app">
+      LOADING
+    </div>
+    <div id="modal"></div>
+    <script src="<%= ASSETS['client.js'] %>" crossorigin="anonymous"></script>
+  </body>
+</html>
