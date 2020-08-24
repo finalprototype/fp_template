@@ -69,4 +69,4 @@ FLAGS=[test-flag-1, testflag2, test_flag_3]
 12. If all looks good, start building or `git init` to start a new git repo and push it up.
 
 ## Support
-None offered. I learned all this myself, you can too if it becomes outdated.
+None offered. If it becomes outdated or broken, google is your best friend here.
