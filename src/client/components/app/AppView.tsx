@@ -5,7 +5,7 @@ import * as actions from '../../store/app/slice';
 import Loader from '../ui/Loader';
 import AppRouter from './AppRouter';
 
-import styles from './__styles__/AppView.scss';
+import './__styles__/AppView.scss';
 
 const mapDispatch = { ...actions };
 const connector = connect(null, mapDispatch);
@@ -26,11 +26,11 @@ const AppView: React.FunctionComponent<PropsFromRedux> = ({ init }: PropsFromRed
   }, [init]);
 
   const suspenseFallback = (
-    <Loader className={styles['suspense-loader']} />
+    <Loader styleName="suspense-loader" />
   );
 
   return (
-    <div className={styles.content}>
+    <div styleName="content">
       <Suspense fallback={suspenseFallback}>
         <AppRouter />
       </Suspense>
